@@ -10,15 +10,14 @@ for (let i=0; i < answers.length; i++) {
     answers[i].addEventListener('click', function() {
         //removes previously set changes
         for (let j=0; j < answers.length; j++) {
-            answers[j].classList.remove('active');
-            answerDiv[j].style.display = 'none';
+            answerDiv[j].style.display === 'none' ? '' : 'none';
             dropdownIcon[j].style.transform = 'scaleY(1)';
         }
         //adds styling changes on click
-        answers[i].classList.add('active');
-        dropdownIcon[i].style.transform = 'scaleY(-1)';
-        //changes answer div display from none to block
-        answerDiv[i].style.display = 'block';
+        answers[i].classList.toggle('active');
+
+        dropdownIcon[i].classList.toggle('change_arrow');
+        answerDiv[i].classList.toggle('show_answer');
     })
 }
 

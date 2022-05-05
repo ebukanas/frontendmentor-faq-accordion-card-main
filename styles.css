@@ -107,6 +107,17 @@ body {
     display: none;
 }
 
+.show_answer {
+    display: block;
+}
+
+.change_arrow {
+    transform: scaleY(-1) !important;
+}
+
+.questions li:hover {
+    color: var(--red);
+}
 
 /* li::after {
     content: 'c';
